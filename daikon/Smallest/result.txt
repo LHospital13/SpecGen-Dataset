@@ -1,0 +1,28 @@
+./Smallest.java:14: verify: The prover cannot establish an assertion (Precondition: ./Smallest.java:31:) in method Smallest
+            __Loop_Invariant_Dummy1(a, index, smallest);
+                                   ^
+./Smallest.java:31: verify: Associated declaration: ./Smallest.java:14:
+    public static void __Loop_Invariant_Dummy1(int[] a, int index, int smallest) {}
+                       ^
+./Smallest.java:26: verify: Precondition conjunct is false: index >= smallest
+    /*@ requires index >= smallest; */
+                       ^
+./Smallest.java:20: verify: The prover cannot establish an assertion (Postcondition: ./Smallest.java:5:) in method Smallest
+        return smallest;
+        ^
+./Smallest.java:5: verify: Associated declaration: ./Smallest.java:20:
+    /*@ ensures (\result >= 0)  ==>  ((\forall int i; (0 <= i && i <= a.length-1) ==> (a[i] >= a[\result]))); */
+        ^
+./Smallest.java:20: verify: The prover cannot establish an assertion (Postcondition: ./Smallest.java:6:) in method Smallest
+        return smallest;
+        ^
+./Smallest.java:6: verify: Associated declaration: ./Smallest.java:20:
+    /*@ ensures \result <= a.length-1; */
+        ^
+./Smallest.java:20: verify: The prover cannot establish an assertion (Postcondition: ./Smallest.java:4:) in method Smallest
+        return smallest;
+        ^
+./Smallest.java:4: verify: Associated declaration: ./Smallest.java:20:
+    /*@ ensures (\result == -1)  ==>  (\result == a.length-1); */
+        ^
+9 verification failures

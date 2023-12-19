@@ -1,0 +1,16 @@
+./DominantIndex.java:19: verify: The prover cannot establish an assertion (Postcondition: ./DominantIndex.java:3:) in method dominantIndex
+        return m1 >= m2 * 2 ? index : -1;
+        ^
+./DominantIndex.java:3: verify: Associated declaration: ./DominantIndex.java:19:
+    /*@ ensures \result <= nums.length-1; */
+        ^
+./DominantIndex.java:9: verify: The prover cannot establish an assertion (Precondition: ./DominantIndex.java:32:) in method dominantIndex
+            __Loop_Invariant_Dummy1(nums, m1, m2, index, i);
+                                   ^
+./DominantIndex.java:32: verify: Associated declaration: ./DominantIndex.java:9:
+    public static void __Loop_Invariant_Dummy1(int[] nums, int m1, int m2, int index, int i) {}
+                       ^
+./DominantIndex.java:25: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+5 verification failures

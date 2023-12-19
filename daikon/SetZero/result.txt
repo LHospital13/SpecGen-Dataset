@@ -1,0 +1,22 @@
+./SetZero.java:13: verify: The prover cannot establish an assertion (Assignable: ./SetZero.java:6:) in method SetZero: \everything
+            __Loop_Invariant_Dummy1(a, iBegin, iEnd, k);
+                                   ^
+./SetZero.java:6: verify: Associated declaration: ./SetZero.java:13:
+	/*@ modifies a[*]; */
+	    ^
+./SetZero.java:13: verify: The prover cannot establish an assertion (Precondition: ./SetZero.java:33:) in method SetZero
+            __Loop_Invariant_Dummy1(a, iBegin, iEnd, k);
+                                   ^
+./SetZero.java:33: verify: Associated declaration: ./SetZero.java:13:
+    public static void __Loop_Invariant_Dummy1(int[] a, int iBegin, int iEnd, int k) {}
+                       ^
+./SetZero.java:28: verify: Precondition conjunct is false: iEnd >= a.length - 1
+    /*@ requires iEnd >= a.length-1; */
+                      ^
+./SetZero.java:9: verify: The prover cannot establish an assertion (Postcondition: ./SetZero.java:7:) in method SetZero
+	public static void SetZero(int[] a, int iBegin, int iEnd) {
+	                   ^
+./SetZero.java:7: verify: Associated declaration: ./SetZero.java:9:
+	/*@ ensures a[\old(iBegin)] == -2 || a[\old(iBegin)] == 0 || a[\old(iBegin)] == 1; */
+	    ^
+7 verification failures

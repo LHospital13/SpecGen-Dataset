@@ -1,0 +1,10 @@
+./MyPower.java:5: verify: The prover cannot establish an assertion (Precondition: ./MyPower.java:13:) in method power
+            __Loop_Invariant_Dummy1(x, n, res, i);
+                                   ^
+./MyPower.java:13: verify: Associated declaration: ./MyPower.java:5:
+    public static void __Loop_Invariant_Dummy1(int x, int n, int res, int i) {}
+                       ^
+./MyPower.java:11: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+3 verification failures

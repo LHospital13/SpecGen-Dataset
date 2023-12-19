@@ -1,0 +1,10 @@
+./FindClosestNum.java:8: verify: The prover cannot establish an assertion (PossiblyNegativeIndex) in method findClosestNumber
+            int num = nums[i];
+                          ^
+./FindClosestNum.java:16: verify: The prover cannot establish an assertion (Postcondition: ./FindClosestNum.java:3:) in method findClosestNumber
+        return ans;
+        ^
+./FindClosestNum.java:3: verify: Associated declaration: ./FindClosestNum.java:16:
+    /*@ ensures !(\forall int i; (0 <= i && i <= nums.length-1) ==> (nums[i] != \result)); */
+        ^
+3 verification failures

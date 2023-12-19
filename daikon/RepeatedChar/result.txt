@@ -1,0 +1,10 @@
+./RepeatedChar.java:8: verify: The prover cannot establish an assertion (Precondition: ./RepeatedChar.java:21:) in method repeatedCharacter
+            __Loop_Invariant_Dummy1(s, seen, i);
+                                   ^
+./RepeatedChar.java:21: verify: Associated declaration: ./RepeatedChar.java:8:
+    public static void __Loop_Invariant_Dummy1(String s, HashSet<Character> seen, int i) {}
+                       ^
+./RepeatedChar.java:20: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+3 verification failures

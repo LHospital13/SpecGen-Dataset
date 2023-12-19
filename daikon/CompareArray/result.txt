@@ -1,0 +1,10 @@
+./CompareArray.java:9: verify: The prover cannot establish an assertion (Precondition: ./CompareArray.java:24:) in method arrcmp
+            __Loop_Invariant_Dummy1(a, b, i);
+                                   ^
+./CompareArray.java:24: verify: Associated declaration: ./CompareArray.java:9:
+    public static void __Loop_Invariant_Dummy1(int[] a, int[] b, int i) {}
+                       ^
+./CompareArray.java:21: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+3 verification failures

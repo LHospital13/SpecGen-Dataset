@@ -1,0 +1,16 @@
+./MySqrt.java:6: verify: The prover cannot establish an assertion (Precondition: ./MySqrt.java:25:) in method mySqrt
+            __Loop_Invariant_Dummy1(x, l, r, ans);
+                                   ^
+./MySqrt.java:25: verify: Associated declaration: ./MySqrt.java:6:
+    public static void __Loop_Invariant_Dummy1(int x, int l, int r, int ans) {}
+                       ^
+./MySqrt.java:19: verify: Precondition conjunct is false: x >= l
+    /*@ requires x >= l; */
+                   ^
+./MySqrt.java:15: verify: The prover cannot establish an assertion (Postcondition: ./MySqrt.java:2:) in method mySqrt
+        return ans;
+        ^
+./MySqrt.java:2: verify: Associated declaration: ./MySqrt.java:15:
+    /*@ ensures \result <= \old(x); */
+        ^
+5 verification failures

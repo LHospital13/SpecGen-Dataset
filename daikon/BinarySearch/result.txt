@@ -1,0 +1,22 @@
+./BinarySearch.java:32: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy1
+    /*@ requires key != arr[mid]; */
+                           ^
+./BinarySearch.java:32: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method __Loop_Invariant_Dummy1
+    /*@ requires key != arr[mid]; */
+                           ^
+./BinarySearch.java:14: verify: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method binarySearch
+            while (low < high && arr[mid] != key) {
+                                    ^
+./BinarySearch.java:14: verify: The prover cannot establish an assertion (PossiblyNegativeIndex) in method binarySearch
+            while (low < high && arr[mid] != key) {
+                                    ^
+./BinarySearch.java:15: verify: The prover cannot establish an assertion (Precondition: ./BinarySearch.java:44:) in method binarySearch
+                __Loop_Invariant_Dummy1(arr, key, low, high, mid);
+                                       ^
+./BinarySearch.java:44: verify: Associated declaration: ./BinarySearch.java:15:
+    public static void __Loop_Invariant_Dummy1(int[] arr, int key, int low, int high, int mid) {}
+                       ^
+./BinarySearch.java:37: verify: Precondition conjunct is false: high <= arr.length
+    /*@ requires high <= arr.length; */
+                      ^
+7 verification failures

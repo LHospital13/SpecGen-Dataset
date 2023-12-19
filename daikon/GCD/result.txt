@@ -1,0 +1,292 @@
+./GCD.java:29: verify: The prover cannot establish an assertion (UndefinedDivideByZero) in method __Loop_Invariant_Dummy1
+	/*@ requires num1 % result == 0; */
+	                  ^
+./GCD.java:19: verify: The prover cannot establish an assertion (Precondition: ./GCD.java:33:) in method gcd
+			__Loop_Invariant_Dummy1(num1, num2, result);
+			                       ^
+./GCD.java:33: verify: Associated declaration: ./GCD.java:19:
+	public static void __Loop_Invariant_Dummy1(int num1, int num2, int result) {}
+	                   ^
+./GCD.java:29: verify: Precondition conjunct is false: num1 % result == 0
+	/*@ requires num1 % result == 0; */
+	                           ^
+./GCD.java:29: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:19:) in method gcd
+	/*@ requires num1 % result == 0; */
+	                  ^
+./GCD.java:19: verify: Associated declaration: ./GCD.java:29:
+			__Loop_Invariant_Dummy1(num1, num2, result);
+			                       ^
+./GCD.java:20: verify: The prover cannot establish an assertion (PossiblyDivideByZero) in method gcd
+            if (num1 % i == 0 && num2 % i == 0) {
+                     ^
+./GCD.java:15: verify: The prover cannot establish an assertion (Postcondition: ./GCD.java:4:) in method gcd
+			return (num1 > num2) ? num1 : num2;
+			^
+./GCD.java:4: verify: Associated declaration: ./GCD.java:15:
+	/*@ ensures \old(num2) % \result == 0; */
+	    ^
+./GCD.java:24: verify: The prover cannot establish an assertion (Postcondition: ./GCD.java:3:) in method gcd
+		return result;
+		^
+./GCD.java:3: verify: Associated declaration: ./GCD.java:24:
+	/*@ ensures \old(num1) % \result == 0; */
+	    ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero) in method gcd
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:24: verify: Associated method exit
+		return result;
+		^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:41:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:41: verify: Associated declaration: ./GCD.java:3:
+        gcd(0, -4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:43:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:43: verify: Associated declaration: ./GCD.java:3:
+        gcd(0, 4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:42:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:42: verify: Associated declaration: ./GCD.java:3:
+        gcd(4, 0);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:44:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:44: verify: Associated declaration: ./GCD.java:3:
+        gcd(-4, -4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:46:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:46: verify: Associated declaration: ./GCD.java:3:
+        gcd(0, 0);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:47:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:47: verify: Associated declaration: ./GCD.java:3:
+        gcd(-4, 4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:45:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:45: verify: Associated declaration: ./GCD.java:3:
+        gcd(4, 4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:40:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:40: verify: Associated declaration: ./GCD.java:3:
+        gcd(-4, 0);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:50:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:50: verify: Associated declaration: ./GCD.java:3:
+        gcd(-1, 1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:53:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:53: verify: Associated declaration: ./GCD.java:3:
+        gcd(1, 2);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:54:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:54: verify: Associated declaration: ./GCD.java:3:
+        gcd(2, 1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:55:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:55: verify: Associated declaration: ./GCD.java:3:
+        gcd(-2, -1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:48:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:48: verify: Associated declaration: ./GCD.java:3:
+        gcd(4, -4);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:56:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:56: verify: Associated declaration: ./GCD.java:3:
+        gcd(-1, -2);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:52:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:52: verify: Associated declaration: ./GCD.java:3:
+        gcd(-1, 1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:51:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:51: verify: Associated declaration: ./GCD.java:3:
+		gcd(1, -1);
+		   ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:61:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:61: verify: Associated declaration: ./GCD.java:3:
+        gcd(3, 5);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:57:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:57: verify: Associated declaration: ./GCD.java:3:
+        gcd(-2, 1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:62:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:62: verify: Associated declaration: ./GCD.java:3:
+        gcd(114, 514);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:63:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:63: verify: Associated declaration: ./GCD.java:3:
+        gcd(-114, 514);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:49:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:49: verify: Associated declaration: ./GCD.java:3:
+        gcd(1, -1);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:59:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:59: verify: Associated declaration: ./GCD.java:3:
+        gcd(3, -5);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:58:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:58: verify: Associated declaration: ./GCD.java:3:
+        gcd(-1, 2);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:60:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:60: verify: Associated declaration: ./GCD.java:3:
+        gcd(-3, 5);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:65:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:65: verify: Associated declaration: ./GCD.java:3:
+        gcd(-114, -514);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:64:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:64: verify: Associated declaration: ./GCD.java:3:
+        gcd(514, 114);
+           ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:67:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:67: verify: Associated declaration: ./GCD.java:3:
+		gcd(27, 81);
+		   ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+./GCD.java:3: verify: The prover cannot establish an assertion (UndefinedDivideByZero: ./GCD.java:66:) in method main
+	/*@ ensures \old(num1) % \result == 0; */
+	                       ^
+./GCD.java:66: verify: Associated declaration: ./GCD.java:3:
+		gcd(16, 64);
+		   ^
+./GCD.java:68: verify: Associated method exit
+    }
+     ^
+97 verification failures

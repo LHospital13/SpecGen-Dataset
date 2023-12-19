@@ -1,0 +1,7 @@
+./LargestPerimeter.java:20: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int)
+    /*@ requires (\forall int i, j; (0 <= i && i <= A.length-1 && 0 <= j && j <= A.length-1) ==> ((i+1 == j) ==> (A[i] <= A[j]))); */
+                              ^
+./LargestPerimeter.java:24: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int)
+    /*@ ensures (\forall int i, j; (0 <= i && i <= A.length-1 && 0 <= j && j <= A.length-1) ==> ((i+1 == j) ==> (A[i] <= A[j]))); */
+                             ^
+2 errors

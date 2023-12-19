@@ -1,0 +1,16 @@
+./IsAscending.java:10: verify: The prover cannot establish an assertion (Precondition: ./IsAscending.java:23:) in method isAscending
+            __Loop_Invariant_Dummy1(arr, n, i);
+                                   ^
+./IsAscending.java:23: verify: Associated declaration: ./IsAscending.java:10:
+    public static void __Loop_Invariant_Dummy1(int[] arr, int n, int i) {}
+                       ^
+./IsAscending.java:20: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+./IsAscending.java:14: verify: The prover cannot establish an assertion (Postcondition: ./IsAscending.java:3:) in method isAscending
+        return true;
+        ^
+./IsAscending.java:3: verify: Associated declaration: ./IsAscending.java:14:
+    /*@ ensures (\result == true)  ==>  ((\forall int i, j; (0 <= i && i <= arr.length-1 && 0 <= j && j <= arr.length-1) ==> ((i+1 == j) ==> (arr[i] < arr[j])))); */
+        ^
+5 verification failures

@@ -1,0 +1,10 @@
+./ReverseString.java:6: verify: The prover cannot establish an assertion (Precondition: ./ReverseString.java:24:) in method reverseString
+            __Loop_Invariant_Dummy1(s, n, left, right);
+                                   ^
+./ReverseString.java:24: verify: Associated declaration: ./ReverseString.java:6:
+    public static void __Loop_Invariant_Dummy1(char[] s, int n, int left, int right) {}
+                       ^
+./ReverseString.java:17: verify: Precondition conjunct is false: left < s.length - 1
+    /*@ requires left < s.length-1; */
+                      ^
+3 verification failures

@@ -1,0 +1,10 @@
+./Inverse.java:10: verify: The prover cannot establish an assertion (Precondition: ./Inverse.java:26:) in method Inverse
+            __Loop_Invariant_Dummy1(x, y, index);
+                                   ^
+./Inverse.java:26: verify: Associated declaration: ./Inverse.java:10:
+    public static void __Loop_Invariant_Dummy1(int[] x, int[] y, int index) {}
+                       ^
+./Inverse.java:23: verify: Precondition conjunct is false: index >= 0
+    /*@ requires index >= 0; */
+                       ^
+3 verification failures

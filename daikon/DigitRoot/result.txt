@@ -1,0 +1,16 @@
+./DigitRoot.java:8: verify: The prover cannot establish an assertion (Precondition: ./DigitRoot.java:21:) in method digitRoot
+                __Loop_Invariant_Dummy2(num, sum);
+                                       ^
+./DigitRoot.java:21: verify: Associated declaration: ./DigitRoot.java:8:
+    public static void __Loop_Invariant_Dummy2(int num, int sum) {}
+                       ^
+./DigitRoot.java:20: verify: Precondition conjunct is false: sum >= 0
+    /*@ requires sum >= 0; */
+                     ^
+./DigitRoot.java:14: verify: The prover cannot establish an assertion (Postcondition: ./DigitRoot.java:2:) in method digitRoot
+        return num;
+        ^
+./DigitRoot.java:2: verify: Associated declaration: ./DigitRoot.java:14:
+    /*@ ensures \result <= \old(num); */
+        ^
+5 verification failures

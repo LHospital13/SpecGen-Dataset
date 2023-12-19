@@ -1,0 +1,25 @@
+./CheckABeforeB.java:19: error: variable i is already defined in method __Loop_Invariant_Dummy1(String,char[],int)
+    /*@ requires (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] == 97 || c[i] == 98)); */
+                              ^
+./CheckABeforeB.java:22: error: variable i is already defined in method __Loop_Invariant_Dummy1(String,char[],int)
+    /*@ requires (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] >= c[i])); */
+                              ^
+./CheckABeforeB.java:24: error: variable i is already defined in method __Loop_Invariant_Dummy1(String,char[],int)
+    /*@ ensures (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] == 97 || c[i] == 98)); */
+                             ^
+./CheckABeforeB.java:26: error: variable i is already defined in method __Loop_Invariant_Dummy1(String,char[],int)
+    /*@ ensures (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] >= c[\old(i)])); */
+                             ^
+./CheckABeforeB.java:33: error: variable i is already defined in method __Loop_Invariant_Dummy2(String,char[],int,int)
+    /*@ requires (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] == 97 || c[i] == 98)); */
+                              ^
+./CheckABeforeB.java:35: error: variable i is already defined in method __Loop_Invariant_Dummy2(String,char[],int,int)
+    /*@ requires (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] <= c[i])); */
+                              ^
+./CheckABeforeB.java:41: error: variable i is already defined in method __Loop_Invariant_Dummy2(String,char[],int,int)
+    /*@ ensures (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] == 97 || c[i] == 98)); */
+                             ^
+./CheckABeforeB.java:43: error: variable i is already defined in method __Loop_Invariant_Dummy2(String,char[],int,int)
+    /*@ ensures (\forall int i; (0 <= i && i <= c.length-1) ==> (c[i] <= c[\old(i)])); */
+                             ^
+8 errors

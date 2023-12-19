@@ -1,0 +1,10 @@
+./FindFirstZero.java:12: verify: The prover cannot establish an assertion (PossiblyNegativeIndex) in method FindFirstZero
+			while (x.length - index > 0 && x[index] != 0) {
+			                                ^
+./FindFirstZero.java:19: verify: The prover cannot establish an assertion (Postcondition: ./FindFirstZero.java:4:) in method FindFirstZero
+			return index;
+			^
+./FindFirstZero.java:4: verify: Associated declaration: ./FindFirstZero.java:19:
+    /*@ ensures \result <= x.length-1; */
+        ^
+3 verification failures

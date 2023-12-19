@@ -1,0 +1,16 @@
+./RotateArray.java:11: verify: The prover cannot establish an assertion (Assignable: ./RotateArray.java:3:) in method rotate: \everything
+            __Loop_Invariant_Dummy1(nums, k, n, newArr, i);
+                                   ^
+./RotateArray.java:3: verify: Associated declaration: ./RotateArray.java:11:
+    /*@ modifies nums[*]; */
+        ^
+./RotateArray.java:11: verify: The prover cannot establish an assertion (Precondition: ./RotateArray.java:25:) in method rotate
+            __Loop_Invariant_Dummy1(nums, k, n, newArr, i);
+                                   ^
+./RotateArray.java:25: verify: Associated declaration: ./RotateArray.java:11:
+    public static void __Loop_Invariant_Dummy1(int[] nums, int k, int n, int[] newArr, int i) {}
+                       ^
+./RotateArray.java:22: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+5 verification failures

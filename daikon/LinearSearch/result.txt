@@ -1,0 +1,46 @@
+./LinearSearch.java:13: verify: The prover cannot establish an assertion (Assignable: ./LinearSearch.java:6:) in method linearSearch: \everything
+            __Loop_Invariant_Dummy1(array, search, c);
+                                   ^
+./LinearSearch.java:6: verify: Associated declaration: ./LinearSearch.java:13:
+    /*@ modifies LinearSearch.location, array[LinearSearch.location], array[LinearSearch.location-1]; */
+        ^
+./LinearSearch.java:6: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method linearSearch
+    /*@ modifies LinearSearch.location, array[LinearSearch.location], array[LinearSearch.location-1]; */
+                                                          ^
+./LinearSearch.java:6: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method linearSearch
+    /*@ modifies LinearSearch.location, array[LinearSearch.location], array[LinearSearch.location-1]; */
+                                                          ^
+./LinearSearch.java:6: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method linearSearch
+    /*@ modifies LinearSearch.location, array[LinearSearch.location], array[LinearSearch.location-1]; */
+                                                                                                 ^
+./LinearSearch.java:13: verify: The prover cannot establish an assertion (Precondition: ./LinearSearch.java:29:) in method linearSearch
+            __Loop_Invariant_Dummy1(array, search, c);
+                                   ^
+./LinearSearch.java:29: verify: Associated declaration: ./LinearSearch.java:13:
+    public static void __Loop_Invariant_Dummy1(int[] array, int search, int c) {}
+                       ^
+./LinearSearch.java:26: verify: Precondition conjunct is false: c >= 0
+    /*@ requires c >= 0; */
+                   ^
+./LinearSearch.java:22: verify: The prover cannot establish an assertion (Postcondition: ./LinearSearch.java:8:) in method linearSearch
+        return location;
+        ^
+./LinearSearch.java:8: verify: Associated declaration: ./LinearSearch.java:22:
+    /*@ ensures LinearSearch.location <= array.length-1; */
+        ^
+./LinearSearch.java:42: verify: The prover cannot establish an assertion (Precondition: ./LinearSearch.java:9:) in method main
+        linearSearch(arr, 0);
+                    ^
+./LinearSearch.java:9: verify: Associated declaration: ./LinearSearch.java:42:
+    public static int linearSearch(int array[], int search) {
+                      ^
+./LinearSearch.java:5: verify: Precondition conjunct is false: LinearSearch.location <= array.length
+    /*@ requires LinearSearch.location <= array.length; */
+                                       ^
+./LinearSearch.java:38: verify: The prover cannot establish an assertion (Postcondition: ./LinearSearch.java:36:) in method main
+    public static void main(String[] args) {
+                       ^
+./LinearSearch.java:36: verify: Associated declaration: ./LinearSearch.java:38:
+    /*@ ensures LinearSearch.location == 9; */
+        ^
+15 verification failures

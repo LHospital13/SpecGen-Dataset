@@ -1,0 +1,13 @@
+./IsOneBitCharacter.java:53: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ requires (\forall int i; (0 <= i && i <= bits.length-1) ==> (bits[i] == 0 || bits[i] == 1)); */
+                              ^
+./IsOneBitCharacter.java:55: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ requires (\forall int i; (0 <= i && i <= bits.length-1) ==> (bits[i] < bits.length-1)); */
+                              ^
+./IsOneBitCharacter.java:59: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ ensures (\forall int i; (0 <= i && i <= bits.length-1) ==> (bits[i] == 0 || bits[i] == 1)); */
+                             ^
+./IsOneBitCharacter.java:60: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ ensures (\forall int i; (0 <= i && i <= bits.length-1) ==> (bits[i] < bits.length-1)); */
+                             ^
+4 errors

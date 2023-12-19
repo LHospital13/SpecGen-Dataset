@@ -1,0 +1,31 @@
+./Fibonacci.java:23: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy1
+	/*@ requires fib[n] == fib[index]; */
+	                ^
+./Fibonacci.java:23: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy1
+	/*@ requires fib[n] == fib[index]; */
+	                          ^
+./Fibonacci.java:23: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method __Loop_Invariant_Dummy1
+	/*@ requires fib[n] == fib[index]; */
+	                          ^
+./Fibonacci.java:14: verify: The prover cannot establish an assertion (Precondition: ./Fibonacci.java:48:) in method fibCompute
+			__Loop_Invariant_Dummy1(n, fib, index);
+			                       ^
+./Fibonacci.java:48: verify: Associated declaration: ./Fibonacci.java:14:
+	public static void __Loop_Invariant_Dummy1(int n, int[] fib, int index) {}
+	                   ^
+./Fibonacci.java:26: verify: Precondition conjunct is false: index >= 2
+	/*@ requires index >= 2; */
+	                   ^
+./Fibonacci.java:23: verify: The prover cannot establish an assertion (UndefinedNegativeIndex: ./Fibonacci.java:14:) in method fibCompute
+	/*@ requires fib[n] == fib[index]; */
+	                          ^
+./Fibonacci.java:14: verify: Associated declaration: ./Fibonacci.java:23:
+			__Loop_Invariant_Dummy1(n, fib, index);
+			                       ^
+./Fibonacci.java:19: verify: The prover cannot establish an assertion (Postcondition: ./Fibonacci.java:3:) in method fibCompute
+		return fib[n];
+		^
+./Fibonacci.java:3: verify: Associated declaration: ./Fibonacci.java:19:
+	/*@ ensures \result >= -1; */
+	    ^
+10 verification failures

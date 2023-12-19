@@ -1,0 +1,22 @@
+./Biggest.java:12: verify: The prover cannot establish an assertion (Precondition: ./Biggest.java:29:) in method biggest
+            __Loop_Invariant_Dummy1(a, index, biggest);
+                                   ^
+./Biggest.java:29: verify: Associated declaration: ./Biggest.java:12:
+    public static void __Loop_Invariant_Dummy1(int[] a, int index, int biggest) {}
+                       ^
+./Biggest.java:24: verify: Precondition conjunct is false: index >= biggest
+    /*@ requires index >= biggest; */
+                       ^
+./Biggest.java:18: verify: The prover cannot establish an assertion (Postcondition: ./Biggest.java:4:) in method biggest
+        return biggest;
+        ^
+./Biggest.java:4: verify: Associated declaration: ./Biggest.java:18:
+    /*@ ensures \result <= a.length-1; */
+        ^
+./Biggest.java:18: verify: The prover cannot establish an assertion (Postcondition: ./Biggest.java:3:) in method biggest
+        return biggest;
+        ^
+./Biggest.java:3: verify: Associated declaration: ./Biggest.java:18:
+    /*@ ensures (\forall int i; (0 <= i && i <= a.length-1) ==> (a[i] <= a[\result])); */
+        ^
+7 verification failures

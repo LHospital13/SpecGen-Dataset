@@ -1,0 +1,13 @@
+./ContainsDuplicate.java:24: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ requires (\forall int i, j; (0 <= i && i <= nums.length-1 && 0 <= j && j <= nums.length-1) ==> ((i+1 == j) ==> (nums[i] <= nums[j]))); */
+                              ^
+./ContainsDuplicate.java:26: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ requires (\forall int i; (0 <= i && i <= nums.length-1) ==> (nums[i] <= nums[n-1])); */
+                              ^
+./ContainsDuplicate.java:29: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ ensures (\forall int i, j; (0 <= i && i <= nums.length-1 && 0 <= j && j <= nums.length-1) ==> ((i+1 == j) ==> (nums[i] <= nums[j]))); */
+                             ^
+./ContainsDuplicate.java:30: error: variable i is already defined in method __Loop_Invariant_Dummy1(int[],int,int)
+    /*@ ensures (\forall int i; (0 <= i && i <= nums.length-1) ==> (nums[i] <= nums[\old(n)-1])); */
+                             ^
+4 errors

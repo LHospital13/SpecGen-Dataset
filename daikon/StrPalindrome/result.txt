@@ -1,0 +1,11 @@
+./StrPalindrome.java:4: error: cannot find symbol
+   /*@ modifies StrPalindrome.reverse, StrPalindrome.reverse.toString; */
+                                                            ^
+  symbol:   variable toString
+  location: variable reverse of type String
+./StrPalindrome.java:27: error: cannot find symbol
+    /*@ modifies StrPalindrome.reverse, StrPalindrome.reverse.toString; */
+                                                             ^
+  symbol:   variable toString
+  location: variable reverse of type String
+2 errors

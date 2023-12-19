@@ -1,0 +1,10 @@
+./PrimeCheck.java:8: verify: The prover cannot establish an assertion (Precondition: ./PrimeCheck.java:20:) in method isPrime
+			__Loop_Invariant_Dummy1(a, i, mid);
+			                       ^
+./PrimeCheck.java:20: verify: Associated declaration: ./PrimeCheck.java:8:
+	public static void __Loop_Invariant_Dummy1(int a, int i, int mid) {}
+	                   ^
+./PrimeCheck.java:16: verify: Precondition conjunct is false: i >= 2
+	/*@ requires i >= 2; */
+	               ^
+3 verification failures

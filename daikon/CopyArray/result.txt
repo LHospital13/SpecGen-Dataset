@@ -1,0 +1,22 @@
+./CopyArray.java:10: verify: The prover cannot establish an assertion (Precondition: ./CopyArray.java:34:) in method copyArray
+            __Loop_Invariant_Dummy1(b, iBegin, iEnd, a, k);
+                                   ^
+./CopyArray.java:34: verify: Associated declaration: ./CopyArray.java:10:
+    public static void __Loop_Invariant_Dummy1(int[] b, int iBegin, int iEnd, int[] a, int k) {}
+                       ^
+./CopyArray.java:19: verify: Precondition conjunct is false: iBegin < iEnd
+    /*@ requires iBegin < iEnd; */
+                        ^
+./CopyArray.java:6: verify: The prover cannot establish an assertion (Postcondition: ./CopyArray.java:5:) in method copyArray
+    public static void copyArray(int[] b, int iBegin, int iEnd, int[] a) {
+                       ^
+./CopyArray.java:5: verify: Associated declaration: ./CopyArray.java:6:
+    /*@ ensures !(\forall int i; (0 <= i && i <= b.length-1) ==> (b[i] != a[\old(iBegin)])); */
+        ^
+./CopyArray.java:10: verify: The prover cannot establish an assertion (Assignable: ./CopyArray.java:4:) in method copyArray: \everything
+            __Loop_Invariant_Dummy1(b, iBegin, iEnd, a, k);
+                                   ^
+./CopyArray.java:4: verify: Associated declaration: ./CopyArray.java:10:
+    /*@ modifies a[*]; */
+        ^
+7 verification failures

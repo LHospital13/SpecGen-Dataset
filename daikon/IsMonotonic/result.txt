@@ -1,0 +1,10 @@
+./IsMonotonic.java:7: verify: The prover cannot establish an assertion (Precondition: ./IsMonotonic.java:24:) in method isMonotonic
+            __Loop_Invariant_Dummy1(nums, inc, dec, n, i);
+                                   ^
+./IsMonotonic.java:24: verify: Associated declaration: ./IsMonotonic.java:7:
+    public static void __Loop_Invariant_Dummy1(int[] nums, boolean inc, boolean dec, int n, int i) {}
+                       ^
+./IsMonotonic.java:20: verify: Precondition conjunct is false: n >= 2
+    /*@ requires n >= 2; */
+                   ^
+3 verification failures

@@ -1,0 +1,19 @@
+./AddLoop.java:8: verify: The prover cannot establish an assertion (Precondition: ./AddLoop.java:57:) in method AddLoop
+                __Loop_Invariant_Dummy1(x, y, n, sum);
+                                       ^
+./AddLoop.java:57: verify: Associated declaration: ./AddLoop.java:8:
+    public static void __Loop_Invariant_Dummy1(int x, int y, int n, int sum) {}
+                       ^
+./AddLoop.java:55: verify: Precondition conjunct is false: x <= sum
+    /*@ requires x <= sum; */
+                   ^
+./AddLoop.java:15: verify: The prover cannot establish an assertion (Precondition: ./AddLoop.java:62:) in method AddLoop
+                __Loop_Invariant_Dummy2(x, y, n, sum);
+                                       ^
+./AddLoop.java:62: verify: Associated declaration: ./AddLoop.java:15:
+    public static void __Loop_Invariant_Dummy2(int x, int y, int n, int sum) {}
+                       ^
+./AddLoop.java:60: verify: Precondition conjunct is false: x >= sum
+    /*@ requires x >= sum; */
+                   ^
+6 verification failures

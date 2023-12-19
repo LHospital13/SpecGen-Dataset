@@ -1,0 +1,25 @@
+./JewelsInStones.java:7: verify: The prover cannot establish an assertion (Precondition: ./JewelsInStones.java:26:) in method numJewelsInStones
+            __Loop_Invariant_Dummy1(jewels, stones, jewelsCount, jewelsLength, stonesLength, i);
+                                   ^
+./JewelsInStones.java:26: verify: Associated declaration: ./JewelsInStones.java:7:
+    public static void __Loop_Invariant_Dummy1(String jewels, String stones, int jewelsCount, int jewelsLength, int stonesLength, int i) {}
+                       ^
+./JewelsInStones.java:24: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+./JewelsInStones.java:18: verify: The prover cannot establish an assertion (Postcondition: ./JewelsInStones.java:2:) in method numJewelsInStones
+        return jewelsCount;
+        ^
+./JewelsInStones.java:2: verify: Associated declaration: ./JewelsInStones.java:18:
+    /*@ ensures \result >= 0; */
+        ^
+./JewelsInStones.java:10: verify: The prover cannot establish an assertion (Precondition: ./JewelsInStones.java:35:) in method numJewelsInStones
+                __Loop_Invariant_Dummy2(jewels, stones, jewelsCount, jewelsLength, stonesLength, i, stone, j);
+                                       ^
+./JewelsInStones.java:35: verify: Associated declaration: ./JewelsInStones.java:10:
+    public static void __Loop_Invariant_Dummy2(String jewels, String stones, int jewelsCount, int jewelsLength, int stonesLength, int i, char stone, int j) {}
+                       ^
+./JewelsInStones.java:30: verify: Precondition conjunct is false: jewelsCount >= 0
+    /*@ requires jewelsCount >= 0; */
+                             ^
+8 verification failures

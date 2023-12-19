@@ -1,0 +1,10 @@
+./LCM.java:18: verify: The prover cannot establish an assertion (Precondition: ./LCM.java:34:) in method lcm
+            __Loop_Invariant_Dummy1(num1, num2, result);
+                                   ^
+./LCM.java:34: verify: Associated declaration: ./LCM.java:18:
+    public static void __Loop_Invariant_Dummy1(int num1, int num2, int result) {}
+                       ^
+./LCM.java:32: verify: Precondition conjunct is false: num1 <= result
+    /*@ requires num1 <= result; */
+                      ^
+3 verification failures

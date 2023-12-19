@@ -1,0 +1,10 @@
+./IsPrefix.java:7: verify: The prover cannot establish an assertion (Precondition: ./IsPrefix.java:17:) in method isPrefix
+            __Loop_Invariant_Dummy1(pat, txt, i);
+                                   ^
+./IsPrefix.java:17: verify: Associated declaration: ./IsPrefix.java:7:
+    public static void __Loop_Invariant_Dummy1(String pat, String txt, int i){}
+                       ^
+./IsPrefix.java:16: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+3 verification failures

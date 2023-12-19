@@ -1,0 +1,14 @@
+./ConvertToTitle.java:36: verify: The prover cannot establish an assertion (UndefinedCalledMethodPrecondition: /home/max/Documents/JMLGPT/openjml/specs/java/lang/String.jml:447:) in method convertToTitle
+/home/max/Documents/JMLGPT/openjml/specs/java/lang/String.jml:447: verify: Associated declaration: ./ConvertToTitle.java:36:
+      @ public static model helper boolean equals(nullable String s1, nullable String s2);
+                                           ^
+/home/max/Documents/JMLGPT/openjml/specs/java/lang/String.jml:436: verify: Precondition conjunct is false: s1.charArray != null
+      @   //-RAC@ requires s1.charArray != null & s2.charArray != null; // OPENJML: TODO Needs the invariant that charArray is not null
+                                        ^
+/home/max/Documents/JMLGPT/openjml/specs/java/lang/String.jml:439: verify: Precondition conjunct is false: s1 == s2
+      @   requires s1 == s2;
+                      ^
+/home/max/Documents/JMLGPT/openjml/specs/java/lang/String.jml:442: verify: Precondition conjunct is false: s1 == null || s2 == null || (java.lang.String.isInterned(s1) && java.lang.String.isInterned(s2))
+      @   requires s1 == null || s2 == null ||
+                                            ^
+5 verification failures

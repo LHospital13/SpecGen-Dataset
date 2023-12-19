@@ -1,0 +1,10 @@
+./IsSubsequence.java:7: verify: The prover cannot establish an assertion (Precondition: ./IsSubsequence.java:21:) in method isSubsequence
+            __Loop_Invariant_Dummy1(s, t, n, i, j);
+                                   ^
+./IsSubsequence.java:21: verify: Associated declaration: ./IsSubsequence.java:7:
+    public static void __Loop_Invariant_Dummy1(String s, String t, int n, int i, int j) {}
+                       ^
+./IsSubsequence.java:18: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+3 verification failures

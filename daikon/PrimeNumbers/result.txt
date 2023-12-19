@@ -1,0 +1,79 @@
+./PrimeNumbers.java:50: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy1
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                          ^
+./PrimeNumbers.java:50: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy1
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                                          ^
+./PrimeNumbers.java:50: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method __Loop_Invariant_Dummy1
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                                          ^
+./PrimeNumbers.java:77: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy2
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                          ^
+./PrimeNumbers.java:77: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method __Loop_Invariant_Dummy2
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                                          ^
+./PrimeNumbers.java:77: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method __Loop_Invariant_Dummy2
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                                          ^
+./PrimeNumbers.java:50: verify: The prover cannot establish an assertion (UndefinedNegativeIndex: ./PrimeNumbers.java:25:) in method primeList
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                                          ^
+./PrimeNumbers.java:25: verify: Associated declaration: ./PrimeNumbers.java:50:
+                  __Loop_Invariant_Dummy1(n, status, num, count, primeArray);
+                                         ^
+./PrimeNumbers.java:45: verify: The prover cannot establish an assertion (Postcondition: ./PrimeNumbers.java:13:) in method primeList
+            return primeArray; 
+            ^
+./PrimeNumbers.java:13: verify: Associated declaration: ./PrimeNumbers.java:45:
+      /*@ ensures (\forall int i; (0 <= i && i <= PrimeNumbers.primeArray.length-1) ==> (PrimeNumbers.primeArray[i] >= 2)); */
+          ^
+./PrimeNumbers.java:45: verify: The prover cannot establish an assertion (Postcondition: ./PrimeNumbers.java:14:) in method primeList
+            return primeArray; 
+            ^
+./PrimeNumbers.java:14: verify: Associated declaration: ./PrimeNumbers.java:45:
+      /*@ ensures (\forall int i, j; (0 <= i && i <= PrimeNumbers.primeArray.length-1 && 0 <= j && j <= PrimeNumbers.primeArray.length-1) ==> ((i+1 == j) ==> (PrimeNumbers.primeArray[i] < PrimeNumbers.primeArray[j]))); */
+          ^
+./PrimeNumbers.java:45: verify: The prover cannot establish an assertion (Postcondition: ./PrimeNumbers.java:15:) in method primeList
+            return primeArray; 
+            ^
+./PrimeNumbers.java:15: verify: Associated declaration: ./PrimeNumbers.java:45:
+      /*@ ensures (\forall int i; (0 <= i && i <= PrimeNumbers.primeArray.length-1) ==> (PrimeNumbers.primeArray[i] <= PrimeNumbers.primeArray[\old(n)-1])); */
+          ^
+./PrimeNumbers.java:45: verify: The prover cannot establish an assertion (Postcondition: ./PrimeNumbers.java:16:) in method primeList
+            return primeArray; 
+            ^
+./PrimeNumbers.java:16: verify: Associated declaration: ./PrimeNumbers.java:45:
+      /*@ ensures (\forall int i; (0 <= i && i <= \old(PrimeNumbers.primeArray.length-1)) ==> (\old(PrimeNumbers.primeArray[i]) < PrimeNumbers.primeArray[\old(n)-1])); */
+          ^
+./PrimeNumbers.java:25: verify: The prover cannot establish an assertion (Precondition: ./PrimeNumbers.java:73:) in method primeList
+                  __Loop_Invariant_Dummy1(n, status, num, count, primeArray);
+                                         ^
+./PrimeNumbers.java:73: verify: Associated declaration: ./PrimeNumbers.java:25:
+      public static void __Loop_Invariant_Dummy1 (int n, int status, int num, int count, int[] primeArray) {}
+                         ^
+./PrimeNumbers.java:50: verify: Precondition conjunct is false: PrimeNumbers.primeArray[n - 1] == PrimeNumbers.primeArray[count - 1]
+      /*@ requires PrimeNumbers.primeArray[n-1] == PrimeNumbers.primeArray[count-1]; */
+                                                ^
+./PrimeNumbers.java:25: verify: The prover cannot establish an assertion (Assignable: ./PrimeNumbers.java:8:) in method primeList: \everything
+                  __Loop_Invariant_Dummy1(n, status, num, count, primeArray);
+                                         ^
+./PrimeNumbers.java:8: verify: Associated declaration: ./PrimeNumbers.java:25:
+      /*@ modifies PrimeNumbers.primeArray, PrimeNumbers.primeArray[*]; */
+          ^
+./PrimeNumbers.java:28: verify: The prover cannot establish an assertion (Assignable: ./PrimeNumbers.java:8:) in method primeList: \everything
+                        __Loop_Invariant_Dummy2(n, status, num, count, j, primeArray);
+                                               ^
+./PrimeNumbers.java:8: verify: Associated declaration: ./PrimeNumbers.java:28:
+      /*@ modifies PrimeNumbers.primeArray, PrimeNumbers.primeArray[*]; */
+          ^
+./PrimeNumbers.java:28: verify: The prover cannot establish an assertion (Precondition: ./PrimeNumbers.java:103:) in method primeList
+                        __Loop_Invariant_Dummy2(n, status, num, count, j, primeArray);
+                                               ^
+./PrimeNumbers.java:103: verify: Associated declaration: ./PrimeNumbers.java:28:
+      public static void __Loop_Invariant_Dummy2 (int n, int status, int num, int count, int j, int[] primeArray) {}
+                         ^
+./PrimeNumbers.java:80: verify: Precondition conjunct is false: status == 1
+      /*@ requires status == 1; */
+                          ^
+26 verification failures

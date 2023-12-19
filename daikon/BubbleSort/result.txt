@@ -1,0 +1,49 @@
+./BubbleSort.java:34: verify: The prover cannot establish an assertion (Assignable: ./BubbleSort.java:26:) in method bubbleSort: \everything
+            __Loop_Invariant_Dummy1(arr, n, i);
+                                   ^
+./BubbleSort.java:26: verify: Associated declaration: ./BubbleSort.java:34:
+    /*@ modifies arr[*]; */
+        ^
+./BubbleSort.java:42: verify: The prover cannot establish an assertion (Postcondition: ./BubbleSort.java:28:) in method bubbleSort
+	    return arr;
+	    ^
+./BubbleSort.java:28: verify: Associated declaration: ./BubbleSort.java:42:
+    /*@ ensures (\forall int i, j; (0 <= i && i <= arr.length-1 && 0 <= j && j <= arr.length-1) ==> ((i+1 == j) ==> (arr[i] <= arr[j]))); */
+        ^
+./BubbleSort.java:34: verify: The prover cannot establish an assertion (Precondition: ./BubbleSort.java:50:) in method bubbleSort
+            __Loop_Invariant_Dummy1(arr, n, i);
+                                   ^
+./BubbleSort.java:50: verify: Associated declaration: ./BubbleSort.java:34:
+    public static void __Loop_Invariant_Dummy1(int[] arr, int n, int i) {}
+                       ^
+./BubbleSort.java:47: verify: Precondition conjunct is false: i >= 0
+    /*@ requires i >= 0; */
+                   ^
+./BubbleSort.java:36: verify: The prover cannot establish an assertion (Precondition: ./BubbleSort.java:60:) in method bubbleSort
+                __Loop_Invariant_Dummy2(arr, n, i, j);
+                                       ^
+./BubbleSort.java:60: verify: Associated declaration: ./BubbleSort.java:36:
+    public static void __Loop_Invariant_Dummy2(int[] arr, int n, int i, int j) {}
+                       ^
+./BubbleSort.java:55: verify: Precondition conjunct is false: j >= 0
+    /*@ requires j >= 0; */
+                   ^
+./BubbleSort.java:36: verify: The prover cannot establish an assertion (Assignable: ./BubbleSort.java:26:) in method bubbleSort: \everything
+                __Loop_Invariant_Dummy2(arr, n, i, j);
+                                       ^
+./BubbleSort.java:26: verify: Associated declaration: ./BubbleSort.java:36:
+    /*@ modifies arr[*]; */
+        ^
+./BubbleSort.java:3: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method swap
+    /*@ requires array[x] == array[y-1]; */
+                      ^
+./BubbleSort.java:3: verify: The prover cannot establish an assertion (UndefinedNegativeIndex) in method swap
+    /*@ requires array[x] == array[y-1]; */
+                                  ^
+./BubbleSort.java:3: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method swap
+    /*@ requires array[x] == array[y-1]; */
+                      ^
+./BubbleSort.java:3: verify: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method swap
+    /*@ requires array[x] == array[y-1]; */
+                                  ^
+16 verification failures

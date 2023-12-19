@@ -1,0 +1,13 @@
+./IsAllUnique.java:9: verify: The prover cannot establish an assertion (Precondition: ./IsAllUnique.java:25:) in method isAllUnique
+            __Loop_Invariant_Dummy1(str, len, num, i);
+                                   ^
+./IsAllUnique.java:25: verify: Associated declaration: ./IsAllUnique.java:9:
+    public static void __Loop_Invariant_Dummy1 (String str, int len, int num, int i) {}
+                       ^
+./IsAllUnique.java:22: verify: Precondition conjunct is false: num >= 0
+    /*@ requires num >= 0; */
+                     ^
+./IsAllUnique.java:12: verify: The prover cannot establish an assertion (PossiblyLargeShift) in method isAllUnique
+            if ((num & (1 << index)) != 0) {
+                          ^
+4 verification failures

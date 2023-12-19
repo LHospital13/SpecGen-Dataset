@@ -1,0 +1,28 @@
+./MoveZeroes.java:7: verify: The prover cannot establish an assertion (Assignable: ./MoveZeroes.java:3:) in method moveZeroes: \everything
+            __Loop_Invariant_Dummy1(nums, n, left, right);
+                                   ^
+./MoveZeroes.java:3: verify: Associated declaration: ./MoveZeroes.java:7:
+    /*@ modifies nums[*]; */
+        ^
+./MoveZeroes.java:7: verify: The prover cannot establish an assertion (Precondition: ./MoveZeroes.java:25:) in method moveZeroes
+            __Loop_Invariant_Dummy1(nums, n, left, right);
+                                   ^
+./MoveZeroes.java:25: verify: Associated declaration: ./MoveZeroes.java:7:
+    public static void __Loop_Invariant_Dummy1(int[] nums, int n, int left, int right) {}
+                       ^
+./MoveZeroes.java:18: verify: Precondition conjunct is false: left >= 0
+    /*@ requires left >= 0; */
+                      ^
+./MoveZeroes.java:9: verify: The prover cannot establish an assertion (Precondition: ./MoveZeroes.java:41:) in method moveZeroes
+                swap(nums, left, right);
+                    ^
+./MoveZeroes.java:41: verify: Associated declaration: ./MoveZeroes.java:9:
+    public static void swap(int[] nums, int left, int right) {
+                       ^
+./MoveZeroes.java:34: verify: Precondition conjunct is false: nums[left] % nums[right] == 0
+    /*@ requires nums[left] % nums[right] == 0; */
+                                          ^
+./MoveZeroes.java:34: verify: The prover cannot establish an assertion (UndefinedDivideByZero) in method swap
+    /*@ requires nums[left] % nums[right] == 0; */
+                            ^
+9 verification failures
